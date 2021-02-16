@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try jQuery Online</title>
+<style>
+    div{
+        background:orange;
+        height:5em;
+        width:5em;
+    }
+</style>
+</head>
+<body>
+<div></div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    /*       const interval = setInterval(function(){
+                   const element = $('div')
+                              .append('<i>square</i>')
+                              .hide(2000)
+                              .show(2000)
+                },11000)                         
+         
+    */
+   
+            
+    const interval = setInterval(function(){
+         $('div').slideToggle(4000)
+                 .slideDown(4000)
+                 .slideUp(8000)
+                 .slideDown(8000)
+                 .fadeOut(3000)
+                 .fadeIn(3000)
+    },33000)            
+})
+</script>
+</body>
+</html>
