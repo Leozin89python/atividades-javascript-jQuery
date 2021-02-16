@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try jQuery Online</title>
+
+<style>
+
+</style>
+</head>
+
+
+<body>
+    <div class="content"></div>
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        const products = [{
+            product:'tv',
+            price:2354,
+            size:'large'
+        },{
+            product:'radio',
+            price:1154,
+            size:'medium'
+        },{
+            product:'radio',
+            price:1154,
+            size:'medium'
+        }]
+        
+        let prod = products.map(p =>{
+            let prodProduct = $('<td>').html(p.product)
+            let prodPrice = $('<td>').html(p.price)
+            let prodSize = $('<td>').html(p.size)
+            return $('<tr>').append(prodProduct).append(prodPrice).append(prodSize) 
+        })
+        const table = $('<table>').append(prod)
+        $('.content').append(table)
+    })
+</script>
+</body>
+</html>
