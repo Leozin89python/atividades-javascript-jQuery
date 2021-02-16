@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+	body{
+		margin:5em;
+	}
+	.x,.o{
+	cursor:pointer;
+	font-size:5em;
+	</style>
+</head>
+<body>
+	<p class="x" onclick=" visibleOrNotVisibleX(event)">x</p>
+	<p class="o" onclick="visibleOrNotVisibleO(event)">o</p>
+	<script>
+	
+		document.onload = addEventListener('load',()=>{
+				let x = document.querySelector('.x')
+				x.style.display = 'none'
+				console.log('carregou')
+		})
+		
+		function visibleOrNotVisibleX(){
+			let x = document.querySelector('.x')
+			let o = document.querySelector('.o')
+			x.style.display = 'none'
+			o.style.display = 'flex'	
+		}
+		
+		function visibleOrNotVisibleO(){
+			let x = document.querySelector('.x')
+			let o = document.querySelector('.o')
+			o.style.display = 'none'
+			x.style.display = 'flex'	
+		}
+		console.log(new Date().toLocaleString('pt-br'))
+		console.log(new Date().toLocaleString('en'))
+	</script>
+</body>
+</html>

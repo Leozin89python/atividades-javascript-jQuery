@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<title>Try jQuery Online</title>
+</head>
+	
+<body>
+    <h1>modificando html #03</h1>
+    <div id="jQuery"></div>
+	
+	<!--<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){ 
+        const pessoas = [
+                {nome: 'Ana',    nota: 9.2},
+                {nome: 'bianca', nota: 8.4},
+                {nome: 'Carlos' ,nota: 7.6},
+                {nome: 'júlia',  nota: 9.7}
+            ]
+            
+            const linhas = pessoas.map(p =>{
+                const tdNome = $('<td>').html(p.nome)
+                const tdNota = $('<td>').html(p.nota)
+                return $('<tr>').append(tdNome).append(tdNota)
+            })
+            
+            const tabela = $('<table>').append(linhas)
+                  .css('border' ,'solid 3px')
+            $('#jQuery').append(tabela)
+    })
+</script>
+
+
+</body>
+
+</html>
