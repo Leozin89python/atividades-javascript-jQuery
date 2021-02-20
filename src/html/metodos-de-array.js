@@ -49,3 +49,37 @@ let some = array.some( e=>{
  console.log(Math.pow(e,2) )
 })
 
+========================================================================================================================================
+ 
+const people = [{
+ nome:'Evelyn freita',
+ idade:22
+},{
+ nome: 'Elaine reis',
+ idade:34
+},{
+ nome:'Mara freitas',
+ idade:19
+},{
+ nome: 'Erica souza',
+ idade:32
+}]
+
+let clients = () =>{
+ return (
+  people.map(e =>'nome:' + e.nome)
+  )
+}
+console.log(clients())
+let age = people.forEach(e =>{
+ console.log('idade:' + e.idade)
+})
+
+people.push({
+ nome:'Rebeca Caldera', idade:17
+})
+console.log(people)
+
+people.splice(1,1)
+console.log(people)
+
